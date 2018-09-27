@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TornExt - Item Market Abroad</title>
+
+    <script src="index.js"></script>
+
+    <style>
+        #JoxDiv { 
+            /*background-color: #f2f2f2;*/
+            width: 100%;
+            min-height: 10px;
+            position: relative;
+        }
+
+        @media (max-width: 1000px) {
+            #JoxDiv {
+                max-width: 386px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            #JoxDiv {
+                max-width: 320px;
+            }
+        }
+
+        .my-flex-container{
+            display: flex;
+        }
+
+        @media (max-width: 1000px) {
+            .my-flex-container {
+                display: block;
+            }
+        }
+
+        ol, ul {
+            list-style: none;
+        }
+
+        .travle-hub-div {
+            display: flex;
+        }
+
+        .img-align {
+            vertical-align: middle !important; 
+            margin: 0 10px 2px 0 !important;
+        }
+
+        nav {
+            min-width: 200px;
+            padding: 0 30px 0 0;
+            margin: 0px;
+        }
+
+        section {
+            flex-grow: 1;
+            overflow-y: auto;
+            margin: 0px;
+            /*background-color: burlywood;*/
+        }
+
+        .country {
+            border-top: 1px solid #fff;
+            border-right: 1px solid #ccc;
+            border-bottom: 1px solid #ccc;
+            height: 33px;
+            line-height: 33px;
+            background-color: #f2f2f2;
+            cursor: pointer;
+        }
+        
+        .my-selected{
+            background-color: #fff !important;
+        }
+
+        .table-style {
+            width: 100%;
+            line-height: 16px !important;
+            border-collapse: collapse;
+        }
+
+        .table-style tr td {
+            padding: 2px 10px !important;
+            border-top: 1px solid rgb(255, 255, 255) !important;
+            /*border-left: 1px solid rgb(204, 204, 204) !important;*/
+            border-bottom: 1px solid rgb(204, 204, 204) !important;
+        }
+
+        .table-style > tr:last-child > td {
+            border-bottom: 0 !important;
+        }
+
+
+        .my-flex-container > .my-flex:not(:first-child) .table-style td{
+            border-left: 1px solid rgb(204, 204, 204) !important;
+        }
+
+        .my-flex-container > .my-flex .table-style td{
+            border-left: 1px solid rgb(204, 204, 204);
+        }
+
+        .my-flex-container > .my-flex:not(:first-child) .table-style th{
+            border-left: 1px solid rgb(204, 204, 204) !important;
+        }
+        /*
+        .my-flex-container > .my-flex:first-child .table-style {
+            border-right: 1px solid rgb(204, 204, 204) !important;
+        }
+        */
+
+        .table-style tr th {
+            font-weight: 600;
+            padding: 2px 10px;
+            border-top: 1px solid rgb(255, 255, 255);
+            border-bottom: 1px solid rgb(204, 204, 204);
+            background: linear-gradient(rgb(255, 255, 255) 0%, rgb(150, 150, 150) 100%);
+        }
+
+
+        .table-style tr td:not(:first-child),  .table-style tr th:not(:first-child) {
+            text-align: right;
+        }
+
+        .left-text {
+            text-align: left;
+        }
+                
+        .icon-mexico {
+            background: url('https://www.torn.com/images/v2/travel_agency/flags/fl_mexico.png?v=1528808940574') 9px center no-repeat;
+            display: inline-block;
+            vertical-align: middle;
+            height: 21px;
+            width: 30px;
+        }
+        .icon-cayman-islands {
+            background: url('https://www.torn.com/images/v2/travel_agency/flags/fl_cayman.png?v=1528808940574') 9px center no-repeat;
+            display: inline-block;
+            vertical-align: middle;
+            height: 21px;
+            width: 30px;
+        }
+        .icon-canada {
+            background: url('https://www.torn.com/images/v2/travel_agency/flags/fl_canada.png?v=1528808940574') 9px center no-repeat;
+            display: inline-block;
+            vertical-align: middle;
+            height: 21px;
+            width: 30px;
+        }
+        .icon-hawaii {
+            background: url('https://www.torn.com/images/v2/travel_agency/flags/fl_hawaii.png?v=1528808940574') 9px center no-repeat;
+            display: inline-block;
+            vertical-align: middle;
+            height: 21px;
+            width: 30px;
+        }
+        .icon-uk {
+            background: url('https://www.torn.com/images/v2/travel_agency/flags/fl_uk.png?v=1528808940574') 9px center no-repeat;
+            display: inline-block;
+            vertical-align: middle;
+            height: 21px;
+            width: 30px;
+        }
+        .icon-argentina {
+            background: url('https://www.torn.com/images/v2/travel_agency/flags/fl_argentina.png?v=1528808940574') 9px center no-repeat;
+            display: inline-block;
+            vertical-align: middle;
+            height: 21px;
+            width: 30px;
+        }
+        .icon-switzerland {
+            background: url('https://www.torn.com/images/v2/travel_agency/flags/fl_switzerland.png?v=1528808940574') 9px center no-repeat;
+            display: inline-block;
+            vertical-align: middle;
+            height: 21px;
+            width: 30px;
+        }
+        .icon-japan {
+            background: url('https://www.torn.com/images/v2/travel_agency/flags/fl_japan.png?v=1528808940574') 9px center no-repeat;
+            display: inline-block;
+            vertical-align: middle;
+            height: 21px;
+            width: 30px;
+        }
+        .icon-china {
+            background: url('https://www.torn.com/images/v2/travel_agency/flags/fl_china.png?v=1528808940574') 9px center no-repeat;
+            display: inline-block;
+            vertical-align: middle;
+            height: 21px;
+            width: 30px;
+        }	
+        .icon-uae {
+            background: url('https://www.torn.com/images/v2/travel_agency/flags/fl_uae.png?v=1528808940574') 9px center no-repeat;
+            display: inline-block;
+            vertical-align: middle;
+            height: 21px;
+            width: 30px;
+        }
+        .icon-south-africa {
+            background: url('https://www.torn.com/images/v2/travel_agency/flags/fl_south_africa.png?v=1528808940574') 9px center no-repeat;
+            display: inline-block;
+            vertical-align: middle;
+            height: 21px;
+            width: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+    </div>
+</body>
+
+</html>

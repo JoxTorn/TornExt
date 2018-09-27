@@ -1,0 +1,497 @@
+#JoxDiv { 
+    /*background-color: #f2f2f2;*/
+    width: 100%;
+	min-height: 10px;
+	position: relative;
+}
+
+@media (max-width: 1000px) {
+	#JoxDiv {
+		max-width: 386px;
+	}
+}
+
+@media (max-width: 600px) {
+	#JoxDiv {
+		max-width: 320px;
+	}
+}
+
+:root {
+	--container-margin : 10px;
+	--level-hold-display: none;
+}
+
+#pointsLevel/*,
+.content-wrapper>.info-msg-cont.green,
+.content-wrapper>.info-msg-cont.green+hr.page-head-delimiter*/ {
+    display: var(--level-hold-display);
+}
+
+.my-torn-left-aligned .container {
+	margin-left: var(--container-margin) !important;
+}
+
+.my-btn {
+	padding: 0 15px 0 10px;
+	/*margin: 0 -5px;*/
+	cursor: pointer;
+	text-shadow: 0 1px 0 rgba(255,255,255,0.4);
+	color: #333;
+	font-weight: bold;
+	text-decoration: none;
+	font-size: 14px;
+	line-height: 24px;
+	text-align: center;
+	border-radius: 5px;
+	/*
+	background-position: 0 -24px;
+	background: url(/images/v2/main/buttons/buttons_desktop.png) left top no-repeat;*/
+	/*display: block*/
+}
+
+
+.my-margin-auto {
+	margin: auto !important;
+}
+.my-margin-top10 {
+	margin-top: 10px !important;
+}
+
+.my-margin-bottom10 {
+	margin-bottom: 10px !important;
+}
+
+.my-margin-left10 {
+	margin-left: 10px !important;
+}
+
+.my-margin-right10 {
+	margin-right: 10px !important;
+}
+
+.my-padding-top10 {
+	padding-top: 10px !important;
+}
+
+.my-padding-bottom10 {
+	padding-bottom: 10px !important;
+}
+
+.my-padding-left10 {
+	padding-left: 10px !important;
+}
+
+.my-padding-right10 {
+	padding-right: 10px !important;
+}
+
+.my-container {
+	background-color: #f2f2f2;
+	/*padding: 5px;*/
+}
+
+.my-footer {
+	background-color: #f5f5f5;
+}
+
+.my-footer-separated {
+	background-color: rgb(230, 230, 230);
+    border-top: 1px solid rgb(205, 205, 205);
+}
+
+.my-hover {
+	background-color: #f2f2f2;
+}
+
+.my-hover:hover {
+	background-color: #adadad;
+}
+
+.my-overflow-y {
+	overflow-y: auto;
+}
+
+.my-height200 {
+	height: 200px;
+}
+
+.my-sticky {
+	position: sticky;
+}
+
+.my-accodition .active {
+	margin: 11px 10px 0 0 !important;
+}
+
+.my-accodition:not(.active) {
+	margin: 10px 10px 0 0 !important;
+}
+
+.my-width100 {
+	width: 100%;
+}
+
+.my-width70 {
+	width: 70%;
+}
+
+.my-width30 {
+	width: 30%;
+}
+
+.my-arrow-wrap {
+	width: 30px !important;
+    height: 30px !important;
+    float: right !important;
+    cursor: pointer;
+}
+
+.my-flex-container{
+	display: flex !important;
+}
+
+@media (max-width: 1000px) {
+	.my-flex-container {
+		display: block !important;
+	}
+}
+
+.my-display-flex {
+	display: flex;
+}
+
+.my-flex {
+	/*display: flex;*/
+	flex: 1 0 0px;
+}
+
+.my-float-left {
+	float: left;
+}
+
+.my-float-right {
+	float: right;
+}
+
+.my-hide {
+	display: none;
+}
+
+.my-input-jail {
+	width: 50px;
+	height: 20px;
+	padding: 0 5px;
+	border-radius: 2px !important;
+}
+
+@media (max-width: 1000px) {
+	.my-input-jail {
+		width: 25px;
+		height: 20px;
+		padding: 0 5px;
+		border-radius: 2px !important;
+	}
+}
+
+.my-checkbox-big{
+	width: 20px;
+	height: 20px;
+	margin: 5px;
+}
+
+@media (max-width: 1000px) {
+	.my-flex-container {
+		display: block;
+	}
+}
+
+.travle-hub-div {
+    display: flex;
+}
+
+.img-align {
+	vertical-align: middle !important; 
+	margin: 0 10px 2px 0 !important;
+}
+
+nav {
+	min-width: 200px;
+	padding: 0 30px 0 0;
+    margin: 0px;
+}
+
+section {
+    flex-grow: 1;
+    overflow-y: auto;
+    margin: 0px;
+    /*background-color: burlywood;*/
+}
+
+.country {
+	border-top: 1px solid #fff;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    height: 33px;
+	line-height: 33px;
+	background-color: #f2f2f2;
+	cursor: pointer;
+}
+
+.my-selected{
+	background-color: #fff !important;
+}
+
+
+.crime-container {
+	line-height: 1.4;
+    background-color: rgb(242, 242, 242);
+	padding: 5px;
+	display: flex;
+    flex-wrap: wrap;
+    /*margin-top: 0px !important;*/
+}
+
+.crime-form {
+	flex-grow: 1;
+}
+
+.crime-style {
+	cursor: pointer;
+    background-color: rgb(250, 250, 250);
+	margin: 5px;
+    padding: 5px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(204, 204, 204);
+    border-image: initial;
+    border-radius: 5px;
+}
+
+.crime-style:hover {
+	background-color: wheat;
+}
+
+.crime-style-nohover {
+	cursor: pointer;
+    background-color: rgb(250, 250, 250);
+	margin: 5px;
+    padding: 5px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(204, 204, 204);
+    border-image: initial;
+    border-radius: 5px;
+}
+
+
+.crime-style > li {
+	display: flex;
+    align-items: center;
+}
+
+.my-flex-center {
+	display: flex;
+    align-items: center;
+}
+
+.crime-style > li > img {
+	margin-right: 5px;
+}
+
+.table-style {
+	width: 100%;
+	line-height: 16px !important; 
+}
+
+.table-style tr td {
+	padding: 2px 10px !important;
+    border-top: 1px solid rgb(255, 255, 255) !important;
+    /*border-left: 1px solid rgb(204, 204, 204) !important;*/
+	border-bottom: 1px solid rgb(204, 204, 204) !important;
+}
+
+.table-style > tr:last-child > td {
+	border-bottom: 0 !important;
+}
+
+
+.my-flex-container > .my-flex:not(:first-child) .table-style td{
+	border-left: 1px solid rgb(204, 204, 204) !important;
+}
+
+.my-flex-container > .my-flex .table-style td{
+	border-left: 1px solid rgb(204, 204, 204);
+}
+
+.my-flex-container > .my-flex:not(:first-child) .table-style th{
+	border-left: 1px solid rgb(204, 204, 204) !important;
+}
+/*
+.my-flex-container > .my-flex:first-child .table-style {
+	border-right: 1px solid rgb(204, 204, 204) !important;
+}
+*/
+
+.table-style tr th {
+	font-weight: 600;
+	padding: 2px 10px;
+	border-top: 1px solid rgb(255, 255, 255);
+    border-bottom: 1px solid rgb(204, 204, 204);
+    background: linear-gradient(rgb(255, 255, 255) 0%, rgb(150, 150, 150) 100%);
+}
+
+
+.table-style tr td:not(:first-child),  .table-style tr th:not(:first-child) {
+	text-align: right;
+}
+
+.left-text {
+	text-align: left;
+}
+
+.my-widget-title {
+	display: flex !important;
+}
+
+
+
+.my-variable-text::after {
+	content: attr(data-textbig);
+}
+
+@media (max-width: 1000px) {
+	.my-variable-text::after {
+		content: attr(data-textsmall);
+	}
+}
+
+
+.icon-mexico {
+	background: url('https://www.torn.com/images/v2/travel_agency/flags/fl_mexico.png?v=1528808940574') 9px center no-repeat;
+	display: inline-block;
+    vertical-align: middle;
+    height: 21px;
+    width: 30px;
+}
+.icon-cayman-islands {
+	background: url('https://www.torn.com/images/v2/travel_agency/flags/fl_cayman.png?v=1528808940574') 9px center no-repeat;
+	display: inline-block;
+    vertical-align: middle;
+    height: 21px;
+    width: 30px;
+}
+.icon-canada {
+	background: url('https://www.torn.com/images/v2/travel_agency/flags/fl_canada.png?v=1528808940574') 9px center no-repeat;
+	display: inline-block;
+    vertical-align: middle;
+    height: 21px;
+    width: 30px;
+}
+.icon-hawaii {
+	background: url('https://www.torn.com/images/v2/travel_agency/flags/fl_hawaii.png?v=1528808940574') 9px center no-repeat;
+	display: inline-block;
+    vertical-align: middle;
+    height: 21px;
+    width: 30px;
+}
+.icon-uk {
+	background: url('https://www.torn.com/images/v2/travel_agency/flags/fl_uk.png?v=1528808940574') 9px center no-repeat;
+	display: inline-block;
+    vertical-align: middle;
+    height: 21px;
+    width: 30px;
+}
+.icon-argentina {
+	background: url('https://www.torn.com/images/v2/travel_agency/flags/fl_argentina.png?v=1528808940574') 9px center no-repeat;
+	display: inline-block;
+    vertical-align: middle;
+    height: 21px;
+    width: 30px;
+}
+.icon-switzerland {
+	background: url('https://www.torn.com/images/v2/travel_agency/flags/fl_switzerland.png?v=1528808940574') 9px center no-repeat;
+	display: inline-block;
+    vertical-align: middle;
+    height: 21px;
+    width: 30px;
+}
+.icon-japan {
+	background: url('https://www.torn.com/images/v2/travel_agency/flags/fl_japan.png?v=1528808940574') 9px center no-repeat;
+	display: inline-block;
+    vertical-align: middle;
+    height: 21px;
+    width: 30px;
+}
+.icon-china {
+	background: url('https://www.torn.com/images/v2/travel_agency/flags/fl_china.png?v=1528808940574') 9px center no-repeat;
+	display: inline-block;
+    vertical-align: middle;
+    height: 21px;
+    width: 30px;
+}	
+.icon-uae {
+	background: url('https://www.torn.com/images/v2/travel_agency/flags/fl_uae.png?v=1528808940574') 9px center no-repeat;
+	display: inline-block;
+    vertical-align: middle;
+    height: 21px;
+    width: 30px;
+}
+.icon-south-africa {
+	background: url('https://www.torn.com/images/v2/travel_agency/flags/fl_south_africa.png?v=1528808940574') 9px center no-repeat;
+	display: inline-block;
+    vertical-align: middle;
+    height: 21px;
+    width: 30px;
+}
+
+/*align torn left*/
+/*
+.container {
+	margin: 0 !important;
+}
+*/
+
+
+/*CITY  FINDS*/
+
+@keyframes svelte-1dz9z41-fade-in {
+	from {
+		opacity: 0;
+		width: 0px;
+		height: 0px;
+		left: 0;
+		top: 0
+	}
+}
+
+.highlight-city-finds .leaflet-marker-pane img[src*='torn.com/images/items/'] {
+	display: block !important;
+	box-sizing: border-box;
+	width: 40px !important;
+	height: 40px !important;
+	left: -20px !important;
+	top: -20px !important;
+	padding: 10px 0;
+	border: none;
+	border-radius: 100%;
+	background: rgba(18, 71, 7, 0.5);
+	box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 1);
+	transition: width 50ms cubic-bezier(0.65, 0.05, 0.36, 1), height 50ms cubic-bezier(0.65, 0.05, 0.36, 1), left 50ms cubic-bezier(0.65, 0.05, 0.36, 1), top 50ms cubic-bezier(0.65, 0.05, 0.36, 1), padding 50ms cubic-bezier(0.65, 0.05, 0.36, 1), background 50ms 0ms;
+	animation: svelte-1dz9z41-fade-in 500ms ease-out backwards;
+	z-index: 999 !important
+}
+
+.highlight-city-finds .leaflet-marker-pane img[src*='torn.com/images/items/']:hover {
+	width: 150px !important;
+	height: 150px !important;
+	left: -75px !important;
+	top: -75px !important;
+	padding: 37.5px 0;
+	background: black;
+	z-index: 1000 !important
+}
+
+.highlight-city-finds .leaflet-marker-icon.user-item-pinpoint.leaflet-clickable {
+	display: none !important
+}

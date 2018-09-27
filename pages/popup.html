@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Torn Ext</title>
+
+    <script src="popup.js"></script>
+    <script src="../content/storage.js"></script>
+
+    <style>
+        body {
+            min-width: 300px;
+            /*min-height: 250px;*/
+        }
+        
+        .red {
+            color: red;
+        }
+
+        .hoverShadow {
+            padding: 2px;
+            margin: 5px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .hoverShadow:hover {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+        }
+
+        .loader {
+            border: 5px solid #f3f3f3;
+            border-radius: 50%;
+            border-top: 5px solid #3f3f3f;
+            width: 20px;
+            height: 20px;
+            -webkit-animation: spin 2s linear infinite; /* Safari */
+            animation: spin 2s linear infinite;
+        }
+        
+        .tab {
+            width: calc(100% / 4 - 2px);
+            float: left;
+            height: 50px;
+            margin: 0px;
+            border-left: solid 1px;
+            border-right: solid 1px;
+            border-top: solid 1px;
+            border-right: solid 1px;            
+            background-color: grey;
+        }
+
+        .tabActive {
+            border-bottom: solid 0px transparent !important;
+            background-color: transparent !important;
+        }
+
+        .tabInner {
+            margin: 15px auto;
+            text-align: center;
+        }
+
+        .tabContainer {
+            clear: both;
+            border-left: solid 1px;
+            border-right: solid 1px;
+            border-bottom: solid 1px;
+            padding: 10px;
+        }
+
+        table, thead, tbody, th, tr, td {
+            border-collapse: collapse;
+            border: solid thin black;
+            text-align: left;
+            vertical-align: middle;
+        }
+
+        tbody tr:hover {
+            background-color: linen;
+        }
+
+        table, thead, tbody {
+            width: 100%;
+        }
+
+        thead {
+            background-color: lightgrey;
+        }
+
+        .right-align {
+            text-align: right;
+        }
+
+        .center-align {
+            text-align: center;
+        }
+
+        .table-filter{
+            width: calc(100% - 4px);
+        }
+
+        .overflow {
+            overflow-x: auto;
+        }
+
+        .hide {
+            display: none;
+        }
+
+        .col-25 {
+            float: left;
+            width: 25%;
+            margin-top: 6px;
+        }
+
+        .col-75 {
+            float: left;
+            width: 75%;
+            margin-top: 6px;
+        }
+
+        .width-100 {
+            width: 100%;
+        }
+
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* Safari */
+        @-webkit-keyframes spin {
+            0% { -webkit-transform: rotate(0deg); }
+            100% { -webkit-transform: rotate(360deg); }
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+    </div>
+</body>
+
+</html>

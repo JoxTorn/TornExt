@@ -1,0 +1,93 @@
+{
+    "manifest_version": 2,
+
+    "name": "TornExt",
+    "version": "0.1.3",
+    "description": "Torn City Browser Extension",
+
+    "icons": {
+        "128": "/resources/icons/icon128.png",
+        "48": "/resources/icons/icon48.png",
+        "16": "/resources/icons/icon16.png"
+    },
+
+    "browser_action": {
+        "default_icon": "/resources/icons/icon16.png",
+        "default_popup": "/pages/popup.html"
+    },
+
+    "options_ui": {
+        "open_in_tab": true,
+        "page": "pages/options.html"
+    },
+
+    "background": {
+        "scripts":["/background/background.js"]
+    },
+
+    "content_scripts": [
+        {
+            "matches": ["https://*.torn.com/*"],
+            "js": ["content/storage.js","content/all-start.js"],
+            "run_at": "document_start"
+        }, {
+            "matches": ["https://*.torn.com/*"],
+            "js": ["content/all.js"],
+            "css": ["content/all.css"]
+        }, {
+            "matches": ["https://*.torn.com/travelagency.php*"],
+            "js": ["content/travelagency.js"],
+            "css": []
+        }, {
+            "matches": ["https://*.torn.com/profiles.php?*"],
+            "js": ["content/profiles.js" ],
+            "css": []
+        }, {
+            "matches": ["https://*.torn.com/index.php*"],
+            "js": ["vendor/moment.min.js","vendor/chart.min.js","content/index.js"],
+            "css": []
+        }, {
+            "matches": ["https://*.torn.com/city.php*"],
+            "js": ["content/city.js"],
+            "css": []
+        }, {
+            "matches": ["https://*.torn.com/gym.php*"],
+            "js": ["vendor/moment.min.js","vendor/chart.min.js","content/gym.js"],
+            "css": []
+        }, {
+            "matches": ["https://*.torn.com/crimes.php*"],
+            "js": ["content/crimes.js"],
+            "css": []
+        }, {
+            "matches": ["https://*.torn.com/jailview.php*"],
+            "js": ["content/jail.js"],
+            "css": []
+        }, {
+            "matches": ["https://*.torn.com/forums.php*"],
+            "js": ["content/forum.js"],
+            "css": []
+        }, {
+            "matches": ["https://*.torn.com/factions.php*"],
+            "js": ["content/faction.js"],
+            "css": []
+        }, {
+            "matches": ["https://*.torn.com/bounties.php*"],
+            "js": ["content/bounties.js"],
+            "css": []
+        }
+    ],
+
+    "web_accessible_resources" : ["/content/factionupgrades.js"],
+
+    "permissions": [
+        "tabs",
+        "activeTab",
+        "idle", 
+        "storage", 
+        "unlimitedStorage", 
+        "notifications",
+        "https://*.torn.com/",
+        "https://*.tornstats.com/",
+        "https://torntravelhub.000webhostapp.com/"
+    ]
+}
